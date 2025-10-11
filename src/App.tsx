@@ -5,8 +5,8 @@ import Home from './pages/Home';
 import Courses from './pages/Courses';
 import Events from './pages/Events';
 import Blog from './pages/Blog';
-import Login from './pages/Login';
-import SignUp from './pages/SignUp';
+// import Login from './pages/Login'; // COMMENTED OUT
+// import SignUp from './pages/SignUp'; // COMMENTED OUT
 import ProtectedRoute from './components/ProtectedRoute';
 import { useAuth } from './context/AuthContext';
 import OAuthCallback from './pages/OAuthCallback';
@@ -20,8 +20,9 @@ function App() {
         {isAuthenticated && <Navbar />}
         <main className="flex-grow">
           <Routes>
-            <Route path="/login" element={isAuthenticated ? <Navigate to="/" replace /> : <Login />} />
-            <Route path="/signup" element={isAuthenticated ? <Navigate to="/" replace /> : <SignUp />} />
+            {/* LOGIN AND SIGNUP ROUTES COMMENTED OUT */}
+            {/* <Route path="/login" element={isAuthenticated ? <Navigate to="/" replace /> : <Login />} /> */}
+            {/* <Route path="/signup" element={isAuthenticated ? <Navigate to="/" replace /> : <SignUp />} /> */}
             <Route path="/oauth/callback" element={<OAuthCallback />} />
 
             <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />

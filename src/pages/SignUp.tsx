@@ -1,3 +1,5 @@
+// SIGN UP PAGE - COMMENTED OUT
+/*
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { registerUser, loginUser } from '../lib/api';
@@ -75,6 +77,19 @@ const SignUp = () => {
         Already have an account?{' '}
         <Link to="/login" className="text-orange-600 hover:underline">Login</Link>
       </p>
+    </div>
+  );
+};
+
+export default SignUp;
+*/
+
+// Placeholder component to prevent import errors
+const SignUp = () => {
+  return (
+    <div className="container mx-auto px-4 py-16 max-w-md">
+      <h1 className="text-3xl font-bold mb-6 text-gray-900">Sign Up Page Disabled</h1>
+      <p className="text-gray-600">This page has been temporarily disabled.</p>
     </div>
   );
 };
